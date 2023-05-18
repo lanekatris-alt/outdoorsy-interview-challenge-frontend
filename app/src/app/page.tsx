@@ -1,8 +1,20 @@
+import { SearchListings } from "@/listings/search-listings";
+import Head from "next/head";
 
-export function SearchListings(){
-    return <h1>listings</h1>
-}
+import "./page.css";
 
 export default function Home() {
-    return <h1>hi</h1>
+  return (
+    <div className="page">
+      {/*<Head>*/}
+      {/*  <link rel="preconnect" href="https://fonts.googleapis.com" />*/}
+      {/*  <link rel="preconnect" href="https://fonts.gstatic.com" />*/}
+      {/*  <link*/}
+      {/*    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"*/}
+      {/*    rel="stylesheet"*/}
+      {/*  />*/}
+      {/*</Head>*/}
+      <SearchListings />
+    </div>
+  );
 }
