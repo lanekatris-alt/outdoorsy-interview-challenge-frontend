@@ -1,19 +1,16 @@
 "use client";
 
-import { useGetRentals } from "./use-get-rentals";
-import { Listing } from "./listing";
+import { useGetRentals } from "../use-get-rentals";
+import { Listing } from "../listing/listing";
 import "./search-listings.css";
 import { useEffect, useState } from "react";
 
 export function SearchListings() {
   const [searchTerm, setSearchTerm] = useState("");
-  const { rentals, refetch, loading, called } = useGetRentals();
-  console.log("rentals", rentals);
-  console.log("searchterm", searchTerm);
+  const { rentals, refetch, loading } = useGetRentals();
 
   // Would want to debounce this input
   useEffect(() => {
-    // if (!searchTerm) return;
     refetch(searchTerm);
   }, [searchTerm, refetch]);
 
@@ -26,6 +23,8 @@ export function SearchListings() {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      <div className={loading ? "show" : "hide"}>Loading...</div>
+
       {rentals.map((x) => (
         <Listing
           key={x.id}
@@ -33,8 +32,8 @@ export function SearchListings() {
           name={x.attributes.name}
         />
       ))}
-      {loading && <div>Loading...</div>}
-      {!loading && !rentals.length && (
+
+      {searchTerm && !loading && !rentals.length && (
         <div>
           No results for <b>{searchTerm}</b>
         </div>

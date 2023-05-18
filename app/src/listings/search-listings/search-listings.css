@@ -1,5 +1,4 @@
 .search {
-    margin-bottom: 2em;
     height: 3em;
     line-height: 3em;
     border-radius: 15px;
@@ -12,4 +11,14 @@
 .search:focus {
     border: 2px solid #d1d5db;
     outline: none;
+}
+
+.show {
+    visibility: visible;
+    margin-bottom: 1em;
+}
+
+.hide {
+    visibility: hidden;
+    margin-bottom: 1em;
 }

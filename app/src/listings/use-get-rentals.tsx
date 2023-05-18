@@ -1,15 +1,10 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { client } from "./axios-instance";
-import { Daum, RentalsResponse } from "./types";
+import { Rental, RentalsResponse } from "./types";
 
 export function useGetRentals() {
-  const [rentals, setRentals] = useState<Daum[]>([]);
+  const [rentals, setRentals] = useState<Rental[]>([]);
   const [loading, setLoading] = useState(false);
-  // const [called, ]
-
-  // useEffect(() => {
-  //   refetch('trailer')
-  // }, []);
 
   const refetch = useCallback(async (searchTerm: string, limit = 5) => {
     if (!searchTerm) {

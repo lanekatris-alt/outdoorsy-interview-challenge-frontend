@@ -1,4 +1,4 @@
-import { SearchListings } from "@/listings/search-listings";
+import { SearchListings } from "@/listings/search-listings/search-listings";
 import Head from "next/head";
 
 import "./page.css";
