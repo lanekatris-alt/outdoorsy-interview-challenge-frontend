@@ -6,6 +6,7 @@ import { Rental, RentalsResponse } from "./types";
 // No error handling
 // Nothing is debounced
 
+// I ran out of time so the image lookup below his hacky 😅
 // Finding the proper image with error handling is needed below
 // I wanted to abstarct this image lookup to the hook since it deals with data, and I didn't want to do this lookup on each rerender
 export function useGetRentals() {
