@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { SearchListings } from "../listings/search-listings/search-listings";
+import SearchListingsWired from "./search-listings";
 
-const meta: Meta<typeof SearchListings> = {
-  title: "Example/Search Listings",
-  component: SearchListings,
+const meta: Meta<typeof SearchListingsWired> = {
+  title: "Search Listings",
+  component: SearchListingsWired,
   parameters: {
     mockData: [
       {
@@ -4050,6 +4050,6 @@ const meta: Meta<typeof SearchListings> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof SearchListings>;
+type Story = StoryObj<typeof SearchListingsWired>;
 
-export const Idk: Story = {};
+export const NormalFunctionality: Story = {};

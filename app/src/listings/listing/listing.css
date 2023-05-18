@@ -1,3 +1,4 @@
+/*Normally I would use a UI framework like Material/Tailwind, etc.*/
 .rounded {
     border-radius: 15px;
 }
@@ -8,4 +9,5 @@
     gap: 1em;
     margin-bottom: 2em;
     font-size: 1.5em;
+    font-weight: 600;
 }
